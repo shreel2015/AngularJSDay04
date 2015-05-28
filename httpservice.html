@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>$http-service-example</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<ul class="nav navbar-nav">
+				<li><a href="EventDetails.html">Event Details</a></li>
+				<li><a href="NewEvent.html">Create Event</a></li>
+				<li><a href="httpservice.html">$http Service Demo</a></li>
+				<li><a href="CacheSample.html">$cacheFactory Service Demo</a></li>
+				<li><a href="CompileSample.html">$compile Service Demo</a></li>
+				<li><a href="LocaleSample.html">$locale Service Demo</a></li>
+				<li><a href="TimeoutSample.html">$timeout Service Demo</a></li>
+				<li><a href="ExceptionHandlerSample.html">$exceptionHandler Service Demo</a></li>
+				<li><a href="FilterSample.html">$filter Service Demo</a></li>
+			</ul>
+		</nav>
+		<div ng-app="myApp" ng-controller="customersCtrl"> 
+			<ul>
+			  <li ng-repeat="x in names">
+				{{ x.Name + ', ' + x.Country }}
+			  </li>
+			</ul>
+		</div>
+	</div>
+	
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src= "js/angular.min.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('customersCtrl', function($scope, $http) {
+		  $http.get("http://www.w3schools.com/angular/customers.php")
+		  .success(function (response) {$scope.names = response.records;});
+		});
+	</script>
+
+</body>
+</html>

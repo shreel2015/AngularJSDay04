@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsApp">
+<head>
+	<meta charset="utf-8">
+	<title>$cacheFactory-service-example</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<ul class="nav navbar-nav">
+				<li><a href="EventDetails.html">Event Details</a></li>
+				<li><a href="NewEvent.html">Create Event</a></li>
+				<li><a href="httpservice.html">$http Service Demo</a></li>
+				<li><a href="CacheSample.html">$cacheFactory Service Demo</a></li>
+				<li><a href="CompileSample.html">$compile Service Demo</a></li>
+				<li><a href="LocaleSample.html">$locale Service Demo</a></li>
+				<li><a href="TimeoutSample.html">$timeout Service Demo</a></li>
+				<li><a href="ExceptionHandlerSample.html">$exceptionHandler Service Demo</a></li>
+				<li><a href="FilterSample.html">$filter Service Demo</a></li>
+			</ul>
+		</nav> 
+		<div ng-controller="CacheSampleController" style="padding: 20px">
+			<form class="col-md-4">
+				<div class="form-group">
+					<label>Key:</label>
+					<input type="text" class="form-control" ng-model="key" />
+				</div>
+				<div class="form-group">
+					<label>Value:</label>
+					<input type="text" class="form-control" ng-model="value" />
+				</div>
+				<button type="button" class="btn" ng-click="addToCache(key, value)">Add To Cache</button><br>
+				<br>
+				<div class="form-group">
+					<input type="text" class="form-control" ng-model="keyToRead" />
+				</div>
+				<h3>Value from Cache: {{readFromCache(keyToRead)}}</h3>
+				<h3>Cache Stats: {{getCacheStats()}}</h3>
+			</form>
+		</div>
+	</div>
+	
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-sanitize.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/CacheSampleController.js"></script>
+	<script src="js/filters.js"></script>
+</body>
+</html>

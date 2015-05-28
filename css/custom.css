@@ -1,0 +1,43 @@
+.session-details {
+	list-style: none;
+	padding: 0;
+	margin-top:15px;
+}
+.session-details .sessionInfo {
+	border: 1px solid #eee;
+    border-radius: 3px;
+    padding: 10px;
+	margin-bottom: 15px;
+}
+.session-details .sessionInfo h4 {
+	margin: 0 0 8px 0;
+}
+.session-details .sessionInfo p {
+	margin: 0;
+}
+.session-details .votingCount {
+	border: 1px solid #eee;
+    border-radius: 3px;
+    float: left;
+    margin: 0 20px;
+    padding: 3px 10px;
+}
+.session-details .votingCount .votingBtn.clr-gray {
+	color: gray;
+}
+.session-details .votingCount .votingValue {
+	padding-left:2px;
+}
+.blue {
+	color: blue;
+}
+.add-inline-fields {
+	display: inline-block;
+	width: 46%;
+}
+.add-inline-fields.sur-mar {
+	margin: 10px 22px 10px 0;
+}
+input.ng-dirty.ng-invalid {
+	background-color: pink;
+}

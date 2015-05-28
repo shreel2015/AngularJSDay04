@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsApp">
+<head>
+	<meta charset="utf-8">
+	<title>$timeout-service-example</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<ul class="nav navbar-nav">
+				<li><a href="EventDetails.html">Event Details</a></li>
+				<li><a href="NewEvent.html">Create Event</a></li>
+				<li><a href="httpservice.html">$http Service Demo</a></li>
+				<li><a href="CacheSample.html">$cacheFactory Service Demo</a></li>
+				<li><a href="CompileSample.html">$compile Service Demo</a></li>
+				<li><a href="LocaleSample.html">$locale Service Demo</a></li>
+				<li><a href="TimeoutSample.html">$timeout Service Demo</a></li>
+				<li><a href="ExceptionHandlerSample.html">$exceptionHandler Service Demo</a></li>
+				<li><a href="FilterSample.html">$filter Service Demo</a></li>
+			</ul>
+		</nav> 
+		<div ng-controller="TimeoutSampleController" style="padding: 20px">
+			<button type="button" class="btn btn-danger" ng-click="cancel()">Cancel</button>
+			<h3>Name: {{name}}</h3>
+		</div>
+	</div>
+	
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-sanitize.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/TimeoutSampleController.js"></script>
+	<script src="js/filters.js"></script>
+</body>
+</html>
